@@ -2,12 +2,12 @@
 [server]
 	Address     = ":8199"
 	ServerRoot  = "public"
-	ServerAgent = "gf-app"
-	LogPath     = "/tmp/log/gf-app/server"
+	ServerAgent = "jizhangji"
+	LogPath     = "./log/jizhangji/server"
 
 # Logger.
 [logger]
-    Path        = "/tmp/log/gf-app"
+    Path        = "./log/jizhangji"
     Level       = "all"
     Stdout      = true
 
@@ -19,10 +19,35 @@
 
 # Database.
 [database]
-    link  = "mysql:root:12345678@tcp(127.0.0.1:3306)/test"
+    link  = "mysql:root:A123456@tcp(localhost:3306)/jizhangji"
     debug = true
     # Database logger.
     [database.logger]
-        Path   = "/tmp/log/gf-app/sql"
+        Path   = "/tmp/log/jizhangji/sql"
         Level  = "all"
         Stdout = true
+
+#[jwt]
+#    #过期时间
+#    timeout = 3600
+#    #token分割符
+#    refresh = 1800
+#    #安全密钥
+#    encryptKey = "jizhangji"
+
+[ledger]
+    # 一个用户最多拥有多少个账本
+    max     =   10
+
+# gtoken配置文件
+[gtoken]
+    # 缓存模式 1 gcache 2 gredis
+    cache-mode = 2
+    # 是否支持多端登录
+    multi-login = true
+
+
+# Redis数据库配置
+[redis]
+    default = "localhost:6379,0,123456?idleTimeout=600"
+    cache   = "localhost:6379,1,123456?idleTimeout=600"

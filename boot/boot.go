@@ -1,7 +1,7 @@
 package boot
 
 import (
-	_ "gf-app/packed"
+	_ "jizhangji/packed"
 ) 
 
 func init() {
