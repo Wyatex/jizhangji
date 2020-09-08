@@ -3,6 +3,11 @@
 
 > 采用最宽松的MIT协议，免费商用
 
+<div align=center>
+<img src="./jizhangji.png" width = "226" height = "272" alt=""/><br>
+<span style="color: pink">这是可爱的记账姬哦</span>
+</div>
+
 # 记账功能:
 * 多账本
 * 分类别
